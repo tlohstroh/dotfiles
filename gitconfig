@@ -1,0 +1,28 @@
+
+
+[core]
+	editor = '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w
+	excludesfile = /Users/Tjitske/.gitignore_global
+[push]
+	default = upstream
+[user]
+	name = Tjitske Lohstroh
+	emal = tjitske@lohstroh.nl
+	email = tjitske@lohstroh.nl
+[color]
+	ui = true
+
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
+[merge]
+  tool = meld
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
